@@ -1,0 +1,72 @@
+/* Modelo de caja más intuitivo y tamaño de fuente según las preferencias del usuario */
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+  
+  /* Fuerza la herencia */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  /* Mejora la legibilidad del texto */
+  body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Elimina márgenes */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote {
+    margin: 0;
+  }
+  
+  /* Facilita estilarlos */
+  img,
+  picture,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* Fuerza la herencia de la fuente */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  /* Corta palabras muy largas e indivisibles */
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* Elimina animaciones según las preferencias del usuario */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
